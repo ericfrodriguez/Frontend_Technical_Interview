@@ -31,15 +31,6 @@ Dentro del repo encontrara dos proyectos `web-app` (Next.js) y `mobile-app`(reac
 
 
 
-
-## Features
-
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
-
-
 ## Deployment Next js project
 
 Primero debera instalar las dependencias
