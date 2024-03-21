@@ -28,6 +28,7 @@ Dentro del repo encontrara dos proyectos `web-app` (Next.js) y `mobile-app`(reac
 - Debe cumplir con las funcionalidades que estan plasmadas.
 - En react native debe estar funcional solo para plataformas mobiles(android y ios)
 - Se tendra en cuenta el rendimiento en lighthouse
+- En la carpeta `/recursos` encontraras la fuente **Integral-CF** la cual debes utilizar en los dos proyectos
 
 
 
