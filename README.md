@@ -18,7 +18,7 @@ Dentro del repo encontrara dos proyectos `web-app` (Next.js) y `mobile-app`(reac
 [![figma](https://img.shields.io/badge/figma-fafafa?logo=figma)](https://www.figma.com/community/file/1352456823229337162)
 
 
-`se recomienda copiar el contenido a un proyecto propio`
+`se recomienda copiar el contenido a un proyecto propio de figma`
 
 
 ### Requerimientos
