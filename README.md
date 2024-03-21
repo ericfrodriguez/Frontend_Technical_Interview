@@ -24,8 +24,8 @@ Dentro del repo encontrara dos proyectos `web-app` (Next.js) y `mobile-app`(reac
 ### Requerimientos
 
 - Para la version de web debe adaptar el diseño para escritorio (responsive) ya que en la prueba solo le daremos el diseño mobile (first mobile)
-- Los dos proyectos debe cumplir con cada una de las funcionalidades propuestas.
-- Debe agregar las funcionalidades que se le 
+- Los dos proyectos deben cumplir con cada una de las funcionalidades propuestas.
+- Debe cumplir con las funcionalidades que estan plasmadas.
 - En react native debe estar funcional solo para plataformas mobiles(android y ios)
 - Se tendra en cuenta el rendimiento en lighthouse
 
