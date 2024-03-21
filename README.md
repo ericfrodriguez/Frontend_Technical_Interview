@@ -54,7 +54,7 @@ Y luego podra levantar el proyecto con
 ```bash
   npm start
 ```
-`Puede que sea necesario intalar paquetes adicionales, para eso siga los pasos que la consola le muestre`
+`Puede que sea necesario intalar paquetes adicionales, para eso siga los pasos que la consola le indique`
 
 Para probar su aplicación expo-cli permite que lo pueda hacer directamente con su dispositivo, tambien le permite utilizar un emulador.
 
