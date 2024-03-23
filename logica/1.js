@@ -18,7 +18,7 @@
 // {car: 'y', veces: 2}
 
 const removerAcentos = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-const removerEspecialCar = value => value.replace(/[., !¡¿?]/g, '');
+const removerEspecialCar = value => value.replace(/[^a-zA-Z0-9]/g, '');
 
 const normalizarTexto = (value) => {
 
@@ -56,5 +56,5 @@ const contarCar = (value) => {
   return matrizContador;
 };
 
-const contador = contarCar('Hoy ya es día 10');
+const contador = contarCar('Hoy, ya es día 10!');
 console.log(contador);
