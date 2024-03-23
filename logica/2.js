@@ -13,6 +13,34 @@
      Salida: MOUREDEV
  */
 
+const t9Mapping = {
+  '1': '.,¿?¡!-_',
+  '2': 'ABC',
+  '3': 'DEF',
+  '4': 'GHI',
+  '5': 'JKL',
+  '6': 'MNO',
+  '7': 'PQRS',
+  '8': 'TUV',
+  '9': 'WXYZ',
+  '0': ' ',
+}
+
 const t9Keyboard = (value) => {
-  return;
+
+  const keyMap = value.split('-');
+
+  let text = '';
+
+  for (let value of keyMap) {
+    const key = value[0];
+    const word = t9Mapping[key].slice(value.length - 1, value.length)
+
+    text += word;
+  }
+
+  return text;
 };
+
+console.log(t9Keyboard('6-666-88-777-33-3-33-888'));
+console.log(t9Keyboard('44-666-555-2-0-6-88-66-3-666-111111'));
