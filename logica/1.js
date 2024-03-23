@@ -17,6 +17,24 @@
 // {car: 's', veces: 1}
 // {car: 'y', veces: 2}
 
+const removerAcentos = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+const removerEspecialCar = value => value.replace(/[., !¡¿?]/g, '');
+
+const normalizarTexto = (value) => {
+
+  const textoSinAcentos = removerAcentos(value);
+  const textoSinEspecialCar = removerEspecialCar(textoSinAcentos);
+
+  const textoNormalizado = textoSinEspecialCar.toLowerCase();
+
+  return textoNormalizado;
+}
+
 const contarCar = (value) => {
+
+  const texto = normalizarTexto(value);
+  console.log(texto)
   return;
 };
+
+contarCar('Hola, cómo estás?');
