@@ -33,8 +33,28 @@ const normalizarTexto = (value) => {
 const contarCar = (value) => {
 
   const texto = normalizarTexto(value);
-  console.log(texto)
-  return;
+
+  const contador = {};
+
+  for (let caracter of texto) {
+    const existeCaracter = contador[caracter];
+
+    if (existeCaracter) {
+      contador[caracter] += 1;
+    } else {
+      contador[caracter] = 1;
+    }
+  }
+
+  const matrizContador = Object.keys(contador)
+    .map(car => ({
+      car,
+      veces: contador[car],
+    }))
+    .sort((a, b) => a.car.localeCompare(b.car))
+
+  return matrizContador;
 };
 
-contarCar('Hola, cómo estás?');
+const contador = contarCar('Hoy ya es día 10');
+console.log(contador);
