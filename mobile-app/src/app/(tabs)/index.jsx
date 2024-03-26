@@ -1,5 +1,5 @@
 
-import * as React from 'react';
+import React, { useState, useRef } from 'react';
 import { Dimensions, Pressable, StyleSheet, Text, View } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -7,14 +7,33 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { colors } from '../../theme/theme';
 
 export default function Home() {
+    const [currentSlide, setCurrentSlide] = useState(0)
     const { width, height } = Dimensions.get('window');
 
-    const carouselRef = React.useRef();
+    const carouselRef = useRef();
 
-    const data = [...new Array(5).keys()];
-
+    const data = [...new Array(4).keys()];
+    
     return (
         <SafeAreaView style={{ flex: 1 }}>
+            <View style={style.navigatorContainer}>
+                {
+                    data.map((_, index) => (
+                        <Pressable
+                            style={{
+                                flex: 1,
+                                height: 8,
+                                borderRadius: 4,
+                                backgroundColor: currentSlide === index ? colors.primary : '#AAAAAA',
+                            }}
+                            onPress={() => {
+                                setCurrentSlide(index);
+                                carouselRef.current.scrollTo({ index, animated: true });
+                            }}
+                        />
+                    ))
+                }
+            </View>
             <Carousel
                 ref={carouselRef}
                 loop={false}
@@ -24,15 +43,17 @@ export default function Home() {
                 bounce={false}
                 data={data}
                 scrollAnimationDuration={200}
-                onSnapToItem={(index) => console.log('current index:', index)}
+                onSnapToItem={(index) => setCurrentSlide(index)}
                 renderItem={({ index }) => (
                     <View
                         style={{
                             flex: 1,
-                            borderWidth: 2,
-                            borderColor: 'red',
+                            // borderWidth: 2,
+                            // borderColor: 'red',
                             justifyContent: 'center',
                             backgroundColor: colors.cardBackground,
+                            borderWidth: 1,
+                            borderColor: colors.cardBackground
                         }}
                     >
                         <Text style={{ textAlign: 'center', fontSize: 30, color: 'white', fontFamily: 'IntegralCF-Medium' }}>
@@ -41,8 +62,8 @@ export default function Home() {
                     </View>
                 )}
             />
-            <Pressable style={[style.button, {left: (width - style.button.width) / 2}]} onPress={() => carouselRef.current.next()}>
-                <Text style={style.textButton}>SIGUIENTE</Text>
+            <Pressable style={[style.button, { left: (width - style.button.width) / 2 }]} onPress={() => carouselRef.current.next()}>
+                <Text style={[style.textButton]}>{currentSlide === data.length - 1 ? 'FINALIZAR' : 'SIGUIENTE'}</Text>
             </Pressable>
         </SafeAreaView>
     );
@@ -66,5 +87,18 @@ const style = StyleSheet.create({
         color: colors.primary,
         fontSize: 16,
         fontFamily: 'Nunito-Black',
-    }
+    },
+    navigatorContainer: {
+        position: 'absolute',
+        top: 50,
+        zIndex: 1,
+        paddingHorizontal: 20,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 8,
+        width: '100%',
+        height: 10,
+    },
 });

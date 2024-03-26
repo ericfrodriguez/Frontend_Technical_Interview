@@ -7,7 +7,7 @@ import { colors } from "../../theme/theme";
 const TabsLayout = () => {
     return (
         <>
-            <StatusBar style="auto" />
+            <StatusBar style="dark" />
             <Tabs screenOptions={{
                 ...tabBarStyles,
             }}>
