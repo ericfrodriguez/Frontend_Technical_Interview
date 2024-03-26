@@ -16,7 +16,7 @@ const TabsLayout = () => {
                     options={{
                         headerShown: false,
                         title: 'Inicio',
-                        tabBarIcon: ({ color, size, focused }) => <Octicon name="home" color={focused ? colors.primary : 'white'} size={size} />
+                        tabBarIcon: ({ color, size, focused }) => <Octicon name="home" color={focused ? colors.primary : 'white'} size={size} />,
                     }}
                 />
                 <Tabs.Screen
@@ -53,6 +53,7 @@ const tabBarStyles = {
         fontSize: 12,
         fontWeight: "normal",
         color: colors.text,
+        fontFamily: 'Nunito-Regular'
     },
     tabBarItemStyle: {
         flex: 0,

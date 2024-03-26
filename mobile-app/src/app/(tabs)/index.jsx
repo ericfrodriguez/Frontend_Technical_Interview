@@ -35,7 +35,7 @@ export default function Home() {
                             backgroundColor: colors.cardBackground,
                         }}
                     >
-                        <Text style={{ textAlign: 'center', fontSize: 30, color: 'white' }}>
+                        <Text style={{ textAlign: 'center', fontSize: 30, color: 'white', fontFamily: 'IntegralCF-Medium' }}>
                             {index}
                         </Text>
                     </View>
@@ -60,11 +60,11 @@ const style = StyleSheet.create({
         borderRadius: 8,
         borderWidth: 2,
         borderColor: colors.primary,
-        fontSize: 16,
-        fontWeight: '600',
         left: 50
     },
     textButton: {
         color: colors.primary,
+        fontSize: 16,
+        fontFamily: 'Nunito-Black',
     }
 });
