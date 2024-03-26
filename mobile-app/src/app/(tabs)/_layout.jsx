@@ -27,6 +27,7 @@ const TabsLayout = () => {
                         tabBarIcon: ({ color, size, focused }) => <Octicon name="search" color={focused ? colors.primary : 'white'} size={size} />
                     }}
                 />
+                
             </Tabs>
         </>
     );
@@ -37,6 +38,9 @@ export default TabsLayout;
 const tabBarStyles = {
     tabBarActiveTintColor: colors.primary,
     tabBarStyle: {
+        position: 'sticky',
+        bottom: 0,
+        elevation: 0,
         height: 68,
         backgroundColor: 'black',
         display: 'flex',
