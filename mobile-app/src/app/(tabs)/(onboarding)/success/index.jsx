@@ -87,7 +87,7 @@ export default function SuccessScreen() {
             checkProgress.value = withDelay(2000, withTiming(1, { duration: 1000, easing: Easing.linear }))
             setTimeout(() => {
                 router.replace('/search');
-            }, 5000)
+            }, 7000)
         }, [checkProgress, borderProgress])
     );
 
