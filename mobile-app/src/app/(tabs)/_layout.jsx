@@ -5,11 +5,19 @@ import Octicon from '@expo/vector-icons/Octicons'
 import { colors } from "../../theme/theme";
 
 const TabsLayout = () => {
+
     return (
         <>
-            <StatusBar style="light"/>
+            <StatusBar style="light" />
             <Tabs screenOptions={{
                 ...tabBarStyles,
+                headerTitleStyle: {
+                    color: 'white'
+                },
+                headerStyle: {
+                    backgroundColor: 'black',
+                    elevation: 0,
+                },
             }}>
                 <Tabs.Screen
                     name="index"
@@ -24,10 +32,20 @@ const TabsLayout = () => {
                     options={{
                         headerTitle: "Buscar",
                         title: "Buscar",
-                        tabBarIcon: ({ color, size, focused }) => <Octicon name="search" color={focused ? colors.primary : 'white'} size={size} />
+                        tabBarIcon: ({ color, size, focused }) => <Octicon name="search" color={focused ? colors.primary : 'white'} size={size} />,
+
                     }}
                 />
-                
+                <Tabs.Screen
+                    name="(onboarding)/success/index"
+                    options={{
+                        headerShown: false,
+                        href: null,
+                        tabBarStyle: {
+                            display: 'none'
+                        }
+                    }}
+                />
             </Tabs>
         </>
     );
@@ -43,7 +61,6 @@ const tabBarStyles = {
         elevation: 0,
         height: 68,
         backgroundColor: 'black',
-        display: 'flex',
         alignItems: 'center',
         paddingBottom: 12,
         borderTopWidth: 1,

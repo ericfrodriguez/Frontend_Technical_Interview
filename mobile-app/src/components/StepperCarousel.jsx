@@ -1,17 +1,18 @@
 
 import React, { useState, useRef } from 'react';
+import { router } from 'expo-router';
 import { Dimensions, Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 import { SafeAreaView } from "react-native-safe-area-context";
 
-
 import { colors } from '../theme/theme';
 
-export const StepperCarousel = ({data, renderItem}) => {
+export const StepperCarousel = ({ data, renderItem }) => {
     const [currentSlide, setCurrentSlide] = useState(0)
     const { width, height } = Dimensions.get('window');
 
     const carouselRef = useRef();
+    const isLastSlide = currentSlide === data.length - 1;
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
@@ -46,8 +47,16 @@ export const StepperCarousel = ({data, renderItem}) => {
                 onSnapToItem={(index) => setCurrentSlide(index)}
                 renderItem={renderItem}
             />
-            <Pressable style={[style.button, { left: (width - style.button.width) / 2 }]} onPress={() => carouselRef.current.next()}>
-                <Text style={[style.textButton]}>{currentSlide === data.length - 1 ? 'FINALIZAR' : 'SIGUIENTE'}</Text>
+            <Pressable
+                style={[style.button, { left: (width - style.button.width) / 2 }]}
+                onPress={() => {
+                    if (isLastSlide) {
+                        router.replace('/success');
+                    }
+                    carouselRef.current.next()
+                }}
+            >
+                <Text style={[style.textButton]}>{isLastSlide ? 'FINALIZAR' : 'SIGUIENTE'}</Text>
             </Pressable>
         </SafeAreaView>
     );
