@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Navbar } from "@/components/ui/Navbar";
 import { BottomTabs } from '../ui/BottomTabs';
+import styles from '@/styles/layouts/Layout.module.css'
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -17,13 +18,12 @@ const Layout = ({ children, title, description }: LayoutProps) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav>
-        <Navbar />
-        <BottomTabs />
-      </nav>
-      <main>
+
+      <Navbar />
+      <main className={styles.main}>
         {children}
       </main>
+        <BottomTabs />
     </>
   )
 }

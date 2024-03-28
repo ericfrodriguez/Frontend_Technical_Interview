@@ -1,6 +1,9 @@
+import styles from "@/styles/ui/Navbar.module.css";
 
 export const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <nav className={styles.container}>
+
+    </nav>
   )
 }

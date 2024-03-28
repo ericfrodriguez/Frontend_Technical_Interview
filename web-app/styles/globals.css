@@ -7,6 +7,8 @@
     --accent-yellow: #C9A555;
     --accent-muted-pink: #AC8B8B;
 
+    --bottom-tab-height: 68px;
+    --navbar-height: 80px;
 }
 
 /* 
@@ -20,4 +22,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
 }

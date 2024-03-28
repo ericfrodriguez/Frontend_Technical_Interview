@@ -1,0 +1,14 @@
+.container {
+    display: none;
+    position: sticky;
+    top: 500;
+    height: var(--navbar-height);
+    background-color: var(--background);
+    border-bottom: 1px solid #585858;
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+    }
+}
