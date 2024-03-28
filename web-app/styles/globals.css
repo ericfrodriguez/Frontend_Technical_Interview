@@ -1,0 +1,23 @@
+:root {
+    --primary: #64C883;
+    --background: #171717;
+    --foreground: #FFFFFF;
+    --muted-foreground: #AAAAAA;
+    --card-background: #0A0A0A;
+    --accent-yellow: #C9A555;
+    --accent-muted-pink: #AC8B8B;
+
+}
+
+/* 
+--screen-sm: 640px;
+--screen-md: 768px;
+--screen-lg: 1024px;
+--screen-xl: 1280px; 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

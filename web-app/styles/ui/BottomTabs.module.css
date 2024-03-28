@@ -1,0 +1,14 @@
+.container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 68px;
+    width: 100%;
+    background-color: var(--background);
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: none;
+    }
+}
