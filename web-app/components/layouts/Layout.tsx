@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import { Navbar } from "@/components/ui/Navbar";
 import { BottomTabs } from '../ui/BottomTabs';
 import styles from '@/styles/layouts/Layout.module.css'
@@ -20,10 +21,10 @@ const Layout = ({ children, title, description }: LayoutProps) => {
       </Head>
 
       <Navbar />
-      <main className={styles.main}>
+      <main className={`${styles.main}`}>
         {children}
       </main>
-        <BottomTabs />
+      <BottomTabs />
     </>
   )
 }
