@@ -1,8 +1,9 @@
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import styles from "@/styles/ui/StepperCarousel.module.css";
-import 'swiper/css';
-import clsx from 'clsx';
 import { useState } from 'react';
+import clsx from 'clsx';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import 'swiper/css';
+
+import styles from "@/styles/ui/StepperCarousel.module.css";
 
 
 
@@ -49,7 +50,7 @@ export const StepperCarousel = () => {
         <StepperPagination data={data} currentSlide={currentSlide} />
         {
           data.map((_, index) => (
-            <SwiperSlide key={index} style={{ display: 'flex' }} className={styles['swiper-slide']}>Slide {index + 1}</SwiperSlide>
+            <SwiperSlide key={index} className={styles['swiper-slide']}>Slide {index + 1}</SwiperSlide>
           ))
         }
       </Swiper>
