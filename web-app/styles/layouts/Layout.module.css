@@ -1,5 +1,11 @@
 .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
+    height: 100vh;
+    width: 100%;
     padding-bottom: var(--bottom-tab-height);
     background-color: var(--background);
 }
@@ -7,5 +13,6 @@
 @media (min-width: 768px) {
     .main {
         min-height: calc(100vh - var(--navbar-height));
+        height: calc(100vh - var(--navbar-height));
     }
 }

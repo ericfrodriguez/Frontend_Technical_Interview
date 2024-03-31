@@ -6,9 +6,10 @@
     justify-content: center;
     height: var(--bottom-tab-height);
     width: 100%;
-    background-color: var(--background);
+    background-color: black;
     border-top: 1px solid #585858;
     gap: 40px;
+    z-index: 1;
 }
 
 .tabItem {

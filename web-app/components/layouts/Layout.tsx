@@ -21,7 +21,7 @@ const Layout = ({ children, title, description }: LayoutProps) => {
       </Head>
 
       <Navbar />
-      <main className={`${styles.main}`}>
+      <main className={styles.main}>
         {children}
       </main>
       <BottomTabs />

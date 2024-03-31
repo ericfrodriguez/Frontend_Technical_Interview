@@ -1,4 +1,6 @@
 import Layout from '@/components/layouts/Layout';
+import { StepperCarousel } from '@/components/ui/StepperCarousel';
+import styles from "@/styles/Home.module.css";
 
 export default function HomePage() {
   return (
@@ -7,7 +9,9 @@ export default function HomePage() {
         title="Inicio - Win Frontend Challenge"
         description="Front End Technical Interview"
       >
-        <h1>Hello world</h1>
+        <section className={styles.stepperContainer}>
+          <StepperCarousel />
+        </section>
       </Layout>
     </>
   );
