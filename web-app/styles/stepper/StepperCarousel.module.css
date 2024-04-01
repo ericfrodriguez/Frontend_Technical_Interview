@@ -7,15 +7,22 @@
 .swiper {
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: var(--card-background);
 }
 
 .swiper-slide {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    color: white;
+    background-color: var(--card-background);
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 400px;
+        max-height: 800px;
+    }
 }

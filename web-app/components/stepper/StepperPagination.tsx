@@ -1,15 +1,16 @@
 import clsx from "clsx";
 import { useSwiper } from "swiper/react";
 import styles from '@/styles/stepper/StepperPagination.module.css';
+import { StepperCarouselProps } from "./StepperCarousel";
 
 interface StepperPaginationProps {
-  data: React.ReactNode[];
-  currentSlide: number;
+  data: StepperCarouselProps['data'];
 }
 
-export const StepperPagination = ({ data, currentSlide }: StepperPaginationProps) => {
+export const StepperPagination = ({ data }: StepperPaginationProps) => {
 
   const swiper = useSwiper();
+  const currentSlide = swiper.activeIndex;
 
   return (
     <div className={styles.pagination}>

@@ -1,0 +1,55 @@
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 335px;
+    height: 100%;
+    gap: 8px;
+}
+
+.textContainer .title {
+    text-align: center;
+    font-size: 28px;
+    font-family: var(--font-integral-cf);
+    font-weight: var(--font-weight-regular);
+    color: var(--foreground);
+}
+
+.textContainer .subtitle {
+    text-align: center;
+    font-size: 18px;
+    font-family: var(--font-nunito);
+    color: var(--primary);
+    font-weight: var(--font-weight-extra-bold);
+}
+
+.textContainer .text {
+    text-align: center;
+    font-size: 14px;
+    font-family: var(--font-nunito);
+    color: var(--foreground);
+    font-weight: var(--font-weight-bold);
+}
+
+.illustrationContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.illustration {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+@media (max-height: 800px) {
+    .illustrationContainer {
+        height: 70%;
+    }
+}

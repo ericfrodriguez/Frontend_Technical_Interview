@@ -1,29 +1,44 @@
 import { useState } from 'react';
-import { Swiper, SwiperSlide} from 'swiper/react';
-import 'swiper/css';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { StepperPagination } from './StepperPagination';
+import { NavigationButton } from './NavigationButton';
+
+import 'swiper/css';
 import styles from "@/styles/stepper/StepperCarousel.module.css";
 
-export const StepperCarousel = () => {
+export interface StepperCarouselProps {
+  data: {
+    name: string;
+    component: () => JSX.Element;
+  }[];
+}
 
-  const [currentSlide, setCurrentSlide] = useState<number>(0)
-  const data = [...new Array(6).map(value => '2')];
+export const StepperCarousel = ({ data }: StepperCarouselProps) => {
+
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
 
   return (
     <div className={styles.container}>
       <Swiper
         className={styles.swiper}
-        spaceBetween={0}
+        spaceBetween={50}
         slidesPerView={1}
         onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
       >
-        <StepperPagination data={data} currentSlide={currentSlide} />
+        <StepperPagination data={data} />
         {
-          data.map((_, index) => (
-            <SwiperSlide key={index} className={styles['swiper-slide']}>Slide {index + 1}</SwiperSlide>
-          ))
+          data.map(({ name, component }) => {
+            const Component = component;
+
+            return (
+              <SwiperSlide key={name} className={styles['swiper-slide']}>
+                <Component />
+              </SwiperSlide>
+            )
+          })
         }
+        <NavigationButton />
       </Swiper>
     </div>
   )

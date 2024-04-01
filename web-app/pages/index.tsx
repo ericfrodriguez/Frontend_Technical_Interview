@@ -1,5 +1,7 @@
 import Layout from '@/components/layouts/Layout';
+import onboardingSlides from '@/components/onboarding/OnboardingSlides';
 import { StepperCarousel } from '@/components/stepper/StepperCarousel';
+
 import styles from "@/styles/Home.module.css";
 
 export default function HomePage() {
@@ -10,7 +12,7 @@ export default function HomePage() {
         description="Front End Technical Interview"
       >
         <section className={styles.stepperContainer}>
-          <StepperCarousel />
+          <StepperCarousel data={onboardingSlides}/>
         </section>
       </Layout>
     </>
