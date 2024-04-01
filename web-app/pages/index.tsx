@@ -1,5 +1,5 @@
 import Layout from '@/components/layouts/Layout';
-import { StepperCarousel } from '@/components/ui/StepperCarousel';
+import { StepperCarousel } from '@/components/stepper/StepperCarousel';
 import styles from "@/styles/Home.module.css";
 
 export default function HomePage() {
