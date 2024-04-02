@@ -10,7 +10,7 @@ export const NavigationButton = () => {
 
   const handleClick = () => {
     if (swiper.isEnd) {
-      router.replace('/search');
+      router.replace('/success');
       return;
     }
     swiper.slideNext();

@@ -1,0 +1,42 @@
+.textContainer {
+    gap: 16px;
+}
+
+.text {
+    color: var(--foreground);
+    font-size: 16px;
+    font-weight: var(--font-weight-bold);
+}
+
+.strongText {
+    font-weight: var(--font-weight-extra-bold);
+    color: var(--primary);
+}
+
+.illustrationContainer {
+    margin-top: 63px;
+    padding-bottom: 140px;
+}
+
+.illustration {
+    width: 263px;
+    height: 357px;
+}
+
+@media (min-height: 900px) {
+    .illustrationContainer {
+        margin-top: 80px;
+        padding-bottom: 160px;
+    }
+}
+
+@media (max-height: 800px) {
+    .illustrationContainer {
+        margin-top: 10px;
+        padding-bottom: 80px;
+    }
+    
+    .illustration {
+        width: calc(263px * 0.8);
+    }
+}

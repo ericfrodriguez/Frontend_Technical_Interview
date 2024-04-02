@@ -1,13 +1,14 @@
 import styles from '@/styles/onboarding/CommonSlide.module.css';
+import clsx from 'clsx';
 
 interface TextContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
 }
 
-export const TextContainer = ({ children, ...props }: TextContainerProps) => {
+export const TextContainer = ({ children, className, ...props }: TextContainerProps) => {
   return (
     <div
-      className={styles.textContainer}
+      className={clsx(styles.textContainer, className)}
       {...props}
     >
       {children}
@@ -19,10 +20,10 @@ interface IllustrationContainerProps extends React.HTMLAttributes<HTMLDivElement
   children: React.ReactNode;
 }
 
-export const IllustrationContainer = ({ children, ...props }: IllustrationContainerProps) => {
+export const IllustrationContainer = ({ children, className, ...props }: IllustrationContainerProps) => {
   return (
     <div
-      className={styles.illustrationContainer}
+      className={clsx(styles.illustrationContainer, className)}
       {...props}
     >
       {children}

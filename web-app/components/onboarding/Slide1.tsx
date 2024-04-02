@@ -1,6 +1,8 @@
-import commonStyles from "@/styles/onboarding/CommonSlide.module.css";
 import Image from "next/image";
+
 import { IllustrationContainer, TextContainer } from "../stepper/SectionContainers";
+
+import commonStyles from "@/styles/onboarding/CommonSlide.module.css";
 
 export const Slide1 = () => {
   return (

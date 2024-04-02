@@ -22,7 +22,7 @@ export const StepperCarousel = ({ data }: StepperCarouselProps) => {
     <div className={styles.container}>
       <Swiper
         className={styles.swiper}
-        spaceBetween={50}
+        spaceBetween={0}
         slidesPerView={1}
         onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
       >

@@ -8,7 +8,7 @@
     gap: 8px;
 }
 
-.textContainer .title {
+.title {
     text-align: center;
     font-size: 28px;
     font-family: var(--font-integral-cf);
@@ -16,7 +16,7 @@
     color: var(--foreground);
 }
 
-.textContainer .subtitle {
+.subtitle {
     text-align: center;
     font-size: 18px;
     font-family: var(--font-nunito);
@@ -24,7 +24,7 @@
     font-weight: var(--font-weight-extra-bold);
 }
 
-.textContainer .text {
+.text {
     text-align: center;
     font-size: 14px;
     font-family: var(--font-nunito);
