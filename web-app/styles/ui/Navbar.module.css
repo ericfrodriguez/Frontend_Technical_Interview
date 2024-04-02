@@ -3,12 +3,27 @@
     position: sticky;
     top: 500;
     height: var(--navbar-height);
-    background-color: var(--background);
-    border-bottom: 1px solid #585858;
+    background-color: var(--card-background);
+    padding: 0 40px;
 }
+
+.link {
+    color: var(--foreground);
+    font-family: var(--font-nunito);
+    font-size: 18px;
+    font-weight: var(--font-weight-semi-bold);
+    text-decoration: none;
+}
+
 
 @media (min-width: 768px) {
     .container {
         display: flex;
+        align-items: center;
+        gap: 40px;
     }
+}
+
+.hidden {
+    display: none;
 }

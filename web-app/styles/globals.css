@@ -8,7 +8,7 @@
     --accent-muted-pink: #AC8B8B;
 
     --bottom-tab-height: 68px;
-    --navbar-height: 80px;
+    --navbar-height: 76px;
 }
 
 /* 
@@ -27,4 +27,5 @@
 body {
     position: relative;
     min-height: 100vh;
+    background-color: var(--background);
 }

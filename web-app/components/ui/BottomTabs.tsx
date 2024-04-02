@@ -1,30 +1,17 @@
-import { HomeIcon, SearchIcon } from '@primer/octicons-react'
+
 import Link from 'next/link';
 import clsx from 'clsx';
 
 import styles from '@/styles/ui/BottomTabs.module.css'
-import { Page } from './interfaces/pages.interface';
 import { usePathname } from 'next/navigation';
 import commonStyles from '@/styles/onboarding/CommonSlide.module.css';
+import { pages } from './pages';
 
 export const BottomTabs = () => {
   const pathname = usePathname();
 
   const hiddenPages: string[] = [
     '/success'
-  ];
-
-  const pages: Page[] = [
-    {
-      icon: HomeIcon,
-      label: 'Inicio',
-      href: '/'
-    },
-    {
-      icon: SearchIcon,
-      label: 'Buscar',
-      href: '/search'
-    },
   ];
 
   return (

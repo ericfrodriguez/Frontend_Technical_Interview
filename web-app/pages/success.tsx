@@ -26,7 +26,7 @@ export default function SuccessPage() {
       <h1 className={styles.title}>¡FELICITACIONES!</h1>
       <h2 className={styles.text}>Bienvenido a WIN</h2>
       <p className={styles.text}>Ya puedes ser parte del mundo del deporte</p>
-      <motion.span animate={{ opacity: [0, 1], transition: { delay: 2 } }} className={styles.countdown}>Volviendo a inicio en {countdown}</motion.span>
+      <motion.span animate={{ opacity: [0, 1], transition: { delay: 2 } }} className={styles.countdown}>Volviendo a Inicio en {countdown}</motion.span>
     </Layout>
   );
 }

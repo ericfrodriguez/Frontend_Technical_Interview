@@ -23,6 +23,8 @@
 @media (min-width: 768px) {
     .container {
         max-width: 400px;
-        max-height: 800px;
+        height: 800px;
+        border-radius: 10px;
+        overflow: hidden;
     }
 }
